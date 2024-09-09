@@ -9,6 +9,12 @@ Class {
 }
 
 { #category : 'accessing' }
+Counter class >> startingAt: anInteger [
+^ self new count: anInteger.
+
+]
+
+{ #category : 'accessing' }
 Counter >> count [ 
    ^ count
 ]
@@ -32,4 +38,17 @@ count := count + 1
 { #category : 'initialization' }
 Counter >> initialize [ 
    count := 0
+]
+
+{ #category : 'printing' }
+Counter >> printOn: aStream [
+super printOn: aStream.
+aStream nextPutAll: ' with value: ', count printString.
+
+]
+
+{ #category : 'printing' }
+Counter >> printString [
+    ^ 'a Counter with value: ', count printString
+
 ]

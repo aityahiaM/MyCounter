@@ -28,3 +28,8 @@ count := count - 1
 Counter >> increment [
 count := count + 1
 ]
+
+{ #category : 'initialization' }
+Counter >> initialize [ 
+   count := 0
+]
